@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LineAuthHandlerComponent } from './components/line-auth-handler/line-auth-handler.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
+import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
