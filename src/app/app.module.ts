@@ -3,9 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { EventListComponent } from './pages/event-list/event-list.component';
 import { EventListItemComponent } from './pages/event-list-item/event-list-item.component';
 import { InputEventComponent } from './pages/input-event/input-event.component';
+import { HomeComponent } from './components/home/home.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,9 +19,13 @@ import { InputEventComponent } from './pages/input-event/input-event.component';
     EventListComponent,
     EventListItemComponent,
     InputEventComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AppRoutingModule
   ],
   providers: [],
