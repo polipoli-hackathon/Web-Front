@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { EventListComponent } from './pages/event-list/event-list.component';
-import { EventListItemComponent } from './pages/event-list-item/event-list-item.component';
+import { EventListItemComponent } from './components/event-list-item/event-list-item.component';
 import { InputEventComponent } from './pages/input-event/input-event.component';
 import { HomeComponent } from './components/home/home.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,14 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     EventListComponent,
     EventListItemComponent,
-    InputEventComponent
+    InputEventComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     AppRoutingModule
   ],
   providers: [],
