@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFirestore
-} from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { mergeMap } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Project } from '../models/project';
@@ -21,7 +19,12 @@ export class ProjectService {
   }
 
   private async updateEvent(project: Project, state: string) {
-    await this.db.collection<Project>('projects').doc(project.id).update({state: state});
+    await this.db.collection<Project>('projects')
+      .doc(project.id)
+      .update({ state: state })
+      .then(() => {
+        this.fetchEvents();
+    });
   }
 
   private fetchEvents(): Observable<Project[]> {
@@ -43,11 +46,11 @@ export class ProjectService {
   }
 
   cancelProject(data: Project): void {
-    this.updateEvent(data, 'Cancel');
+    this.updateEvent(data, 'cancel');
   }
 
   joinProject(data: Project): void {
-    this.updateEvent(data, 'Join');
+    this.updateEvent(data, 'join');
   }
 
 }
