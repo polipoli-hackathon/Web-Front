@@ -4,28 +4,27 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { EventListComponent } from './pages/event-list/event-list.component';
-import { EventListItemComponent } from './pages/event-list-item/event-list-item.component';
-import { InputEventComponent } from './pages/input-event/input-event.component';
+
 import { HomeComponent } from './components/home/home.component';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectListComponent } from './pages/project-list/project-list.component';
+import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
+import { InputProjectComponent } from './pages/input-project/input-project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventListComponent,
-    EventListItemComponent,
-    InputEventComponent
+    ProjectListComponent,
+    ProjectListItemComponent,
+    InputProjectComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     AppRoutingModule
   ],
   providers: [],

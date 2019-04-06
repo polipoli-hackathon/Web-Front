@@ -1,0 +1,5 @@
+<div *ngFor="let project of (projects$ | async)">
+  <p>project.title</p>
+  <button (click)="cancel(project)">キャンセル</button>
+  <button (click)="apply(project)">参加する</button>
+</div>
