@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectListComponent } from './pages/project-list/project-list.component';
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
 import { InputProjectComponent } from './pages/input-project/input-project.component';
+import { LineAuthHandlerComponent } from './components/line-auth-handler/line-auth-handler.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { InputProjectComponent } from './pages/input-project/input-project.compo
     ProjectListItemComponent,
     InputProjectComponent,
     HomeComponent,
+    LineAuthHandlerComponent,
   ],
   imports: [
     BrowserModule,
