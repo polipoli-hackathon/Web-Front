@@ -1,3 +1,8 @@
-<p>
-  input-event works!
-</p>
+<div>
+    <label>どのスポーツをしたい？</label>
+    <div>
+      <select id="play"  required>
+        <option *ngFor="let play of plays" [value]="play">{{play}}</option>
+      </select>
+    </div>
+</div>

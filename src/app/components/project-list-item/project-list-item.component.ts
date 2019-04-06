@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-project-list-item',
@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-list-item.component.scss']
 })
 export class ProjectListItemComponent implements OnInit {
+  @Input() readonly place: string;
+  @Output() join = new EventEmitter();
+  @Output() stop = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  apply() {
+    this.join.emit();
+  }
+
+  cancel() {
+    this.stop.emit();
   }
 
 }
