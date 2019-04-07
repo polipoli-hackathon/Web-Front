@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {environment} from '../../../environments/environment';
-import {AuthStateService} from '../../services/auth-state.service';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { environment } from '../../../environments/environment';
+import { AuthStateService } from '../../services/auth-state.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
 
