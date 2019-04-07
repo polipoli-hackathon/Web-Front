@@ -14,12 +14,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'XXXXX',
-    authDomain: 'XXXXX',
-    databaseURL: 'XXXXX',
-    projectId: 'XXXXX',
-    storageBucket: 'XXXXX',
-    messagingSenderId: 'XXXXX',
+    apiKey: 'AIzaSyCAPFezesU6R9GZwmzCe2zTVQudGXpXCoI',
+    authDomain: 'getogether-3f261.firebaseapp.com',
+    databaseURL: 'https://getogether-3f261.firebaseio.com',
+    projectId: 'getogether-3f261',
+    storageBucket: 'getogether-3f261.appspot.com',
+    messagingSenderId: '451338627783'
   },
   cloud_functions: {
     host_name: 'https://XXXXX.cloudfunctions.net',
