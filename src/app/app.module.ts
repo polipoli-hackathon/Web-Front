@@ -14,6 +14,7 @@ import { ProjectListItemComponent } from './components/project-list-item/project
 import { InputProjectComponent } from './pages/input-project/input-project.component';
 import { ShareComponent } from './components/share/share.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AlertComponent } from './components/alert/alert.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ AngularFirestore ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

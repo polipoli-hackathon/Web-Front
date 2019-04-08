@@ -6,8 +6,8 @@ import { ProjectListItemComponent } from './components/project-list-item/project
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '/input-project', component: InputProjectComponent },
-  { path: '/project-list-item', component: ProjectListItemComponent }
+  { path: 'input-project', component: InputProjectComponent },
+  { path: 'project-list-item', component: ProjectListItemComponent }
   // {path: 'line_auth_handler', component: LineAuthHandlerComponent},
 ];
 
