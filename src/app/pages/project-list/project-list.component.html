@@ -1,6 +1,8 @@
 <div *ngFor="let project of (projects$ | async)">
   <app-project-list-item 
-  [place]="project.place"
+  [placeName]="project.placeName"
+  [startAt]="project.startAt"
+  [playName]="project.playName"
   (join)="apply(project)"
   (stop)="cancel(project)"></app-project-list-item>
 </div>
