@@ -2,7 +2,21 @@
     <label>どのスポーツをしたい？</label>
     <div>
       <select id="play"  required>
-        <option *ngFor="let play of plays" [value]="play">{{play}}</option>
+        <option *ngFor="let play of plays" 
+        [value]="play"
+        [(ngModel)]="data.playName">{{play}}</option>
       </select>
     </div>
+    <label>どれくらい遊びたい？</label>
+    <div>
+      <select id="hours"  required>
+        <option *ngFor="let hour of hours" 
+        [value]="hour"
+        [(ngModel)]="data.term">{{hour}}h</option>
+      </select>
+    </div>
+    <input id="place" [(ngModel)]="data.place" />
+    <input id="price" [(ngModel)]="data.price" />
+    <input id="startAt" [(ngModel)]="data.startAt"/>
+    <button type="submit" onclick="post(data)"></button>
 </div>

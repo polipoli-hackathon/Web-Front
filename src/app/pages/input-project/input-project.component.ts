@@ -11,11 +11,14 @@ export class InputProjectComponent implements OnInit {
   public plays: string[] = [
     'Soccer', 'BasketBall', 'BaseBall'
   ];
+  public hours: number[] = [1, 2, 3, 4, 5];
 
-  private data = {
+  public data = {
     playName: '',
     place: '',
     price: 0,
+    term: 0,
+    startAt: Date
   };
 
   constructor(
@@ -25,7 +28,7 @@ export class InputProjectComponent implements OnInit {
   ngOnInit() {
   }
 
-  private post(data): void {
+  public post(data): void {
     this.projectService.createProject(data);
   }
 
