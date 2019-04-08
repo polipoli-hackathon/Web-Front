@@ -9,14 +9,22 @@
     </div>
     <label>どれくらい遊びたい？</label>
     <div>
-      <select id="hours"  required>
+      <select id="hour"  required>
         <option *ngFor="let hour of hours" 
         [value]="hour"
         [(ngModel)]="data.term">{{hour}}h</option>
       </select>
     </div>
-    <input id="place" [(ngModel)]="data.place" />
-    <input id="price" [(ngModel)]="data.price" />
-    <input id="startAt" [(ngModel)]="data.startAt"/>
+    <mat-form-field class="example-full-width">
+      <input matInput [min]="minDate" [max]="maxDate"[matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  <div>
+  <div>
+      <input id="place" [(ngModel)]="data.place" />
+      <input id="price" [(ngModel)]="data.price" />
+      <input id="startAt" [(ngModel)]="data.startAt"/>
+    </div>
     <button type="submit" onclick="post(data)">Togetherしよう！</button>
 </div>

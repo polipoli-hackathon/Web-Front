@@ -15,6 +15,7 @@ import { InputProjectComponent } from './pages/input-project/input-project.compo
 import { ShareComponent } from './components/share/share.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { MatDatepickerModule, MatFormFieldModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule
   ],
   providers: [ AngularFirestore ],
   bootstrap: [ AppComponent ]

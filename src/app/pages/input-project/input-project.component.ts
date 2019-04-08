@@ -7,18 +7,19 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./input-project.component.scss']
 })
 export class InputProjectComponent implements OnInit {
-
+  public minDate = new Date(2000, 0, 1);
+  public maxDate = new Date(2020, 0, 1);
   public plays: string[] = [
     'Soccer', 'BasketBall', 'BaseBall'
   ];
-  public hours: number[] = [1, 2, 3, 4, 5];
+  public hours: string[] = ['1', '2', '3', '4', '5'];
 
   public data = {
     playName: '',
     place: '',
     price: 0,
-    term: 0,
-    startAt: Date
+    term: 1,
+    startAt: 0
   };
 
   constructor(
