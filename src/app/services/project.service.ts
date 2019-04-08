@@ -39,7 +39,7 @@ export class ProjectService {
   }
 
   loadProjects(): Observable<Project[]> {
-    return this.projects$ || this.fetchEvents();
+    return this.projects$ || this.fetchProjects();
   }
 
   async addProject(data: Project) {
