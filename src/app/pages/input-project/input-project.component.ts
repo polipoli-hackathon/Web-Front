@@ -29,7 +29,7 @@ export class InputProjectComponent implements OnInit {
   }
 
   public post(data): void {
-    this.projectService.createProject(data);
+    this.projectService.addProject(data);
   }
 
 }

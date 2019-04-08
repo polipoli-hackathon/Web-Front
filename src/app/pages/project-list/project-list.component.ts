@@ -16,16 +16,16 @@ export class ProjectListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.get();
+    this.load();
   }
 
-  private get(): Observable<Project[]> {
-    this.projects$ = this.projectService.getProjects();
+  private load(): Observable<Project[]> {
+    this.projects$ = this.projectService.loadProjects();
     return this.projects$;
   }
 
-  apply(data: Project): void {
-    this.projectService.applyProject(data);
+  entry(data: Project): void {
+    this.projectService.entryProject(data);
   }
 
   cancel(data: Project): void {

@@ -19,16 +19,16 @@ export class ProjectService {
     this._projects$ = new BehaviorSubject([]);
   }
 
-  private async updateEvent(project: Project, state: string) {
+  private async updateProject(project: Project, state: string) {
     await this.db.collection<Project>('projects')
       .doc(project.id)
       .update({ state: state })
       .then(() => {
-        this.fetchEvents();
+        this.fetchProjects();
     });
   }
 
-  private fetchEvents(): Observable<Project[]> {
+  private fetchProjects(): Observable<Project[]> {
     return this.db.collection<Project>('projects').valueChanges().pipe(
       mergeMap(data => {
         this._projects$.next(data);
@@ -38,20 +38,20 @@ export class ProjectService {
     );
   }
 
-  getProjects(): Observable<Project[]> {
+  loadProjects(): Observable<Project[]> {
     return this.projects$ || this.fetchEvents();
   }
 
-  async createProject(data: Project) {
+  async addProject(data: Project) {
     await this.db.collection<Project>('projects').add(data);
   }
 
   cancelProject(data: Project): void {
-    this.updateEvent(data, ProjectUser.state.Cancel);
+    this.updateProject(data, ProjectUser.state.Cancel);
   }
 
-  applyProject(data: Project): void {
-    this.updateEvent(data, ProjectUser.state.Apply);
+  entryProject(data: Project): void {
+    this.updateProject(data, ProjectUser.state.Apply);
   }
 
 }
