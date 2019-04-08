@@ -13,6 +13,7 @@ import { ProjectListComponent } from './pages/project-list/project-list.componen
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
 import { InputProjectComponent } from './pages/input-project/input-project.component';
 import { ShareComponent } from './components/share/share.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ShareComponent } from './components/share/share.component';
     InputProjectComponent,
     HomeComponent,
     ShareComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
