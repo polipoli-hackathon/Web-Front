@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +16,7 @@ import { InputProjectComponent } from './pages/input-project/input-project.compo
 import { ShareComponent } from './components/share/share.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { MatDatepickerModule, MatFormFieldModule } from '@angular/material';
+import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,15 @@ import { MatDatepickerModule, MatFormFieldModule } from '@angular/material';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     FormsModule,
     MatDatepickerModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule
   ],
   providers: [ AngularFirestore ],
   bootstrap: [ AppComponent ]

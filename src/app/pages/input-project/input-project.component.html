@@ -4,7 +4,8 @@
       <select id="play"  required>
         <option *ngFor="let play of plays" 
         [value]="play"
-        [(ngModel)]="data.playName">{{play}}</option>
+        [(ngModel)]="data.playName"
+        ngDefaultControl>{{play}}</option>
       </select>
     </div>
     <label>どれくらい遊びたい？</label>
@@ -12,7 +13,8 @@
       <select id="hour"  required>
         <option *ngFor="let hour of hours" 
         [value]="hour"
-        [(ngModel)]="data.term">{{hour}}h</option>
+        [(ngModel)]="data.term"
+        ngDefaultControl>{{hour}}h</option>
       </select>
     </div>
     <mat-form-field class="example-full-width">
@@ -25,5 +27,6 @@
       <input id="place" [(ngModel)]="data.place" />
       <input id="price" [(ngModel)]="data.price" />
   </div>
-    <button type="submit" onclick="post(data)">Togetherしよう！</button>
+  <button type="button" (click)="post(data)" class="btn btn-success">Togetherしよう！</button>
+
 </div>
