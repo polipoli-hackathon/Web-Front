@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-input-project',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputProjectComponent implements OnInit {
 
-  constructor() { }
+  public plays: string[] = [
+    'Soccer', 'BasketBall', 'BaseBall'
+  ];
+  public hours: number[] = [1, 2, 3, 4, 5];
+
+  public data = {
+    playName: '',
+    place: '',
+    price: 0,
+    term: 0,
+    startAt: Date
+  };
+
+  constructor(
+    private projectService: ProjectService
+  ) { }
 
   ngOnInit() {
+  }
+
+  public post(data): void {
+    this.projectService.createProject(data);
   }
 
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -13,6 +13,9 @@ import { ProjectListComponent } from './pages/project-list/project-list.componen
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
 import { InputProjectComponent } from './pages/input-project/input-project.component';
 import { LineAuthHandlerComponent } from './components/line-auth-handler/line-auth-handler.component';
+import { ShareComponent } from './components/share/share.component';
+import { AlertComponent } from './components/alert/alert.component';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { LineAuthHandlerComponent } from './components/line-auth-handler/line-au
     InputProjectComponent,
     HomeComponent,
     LineAuthHandlerComponent,
+    ShareComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

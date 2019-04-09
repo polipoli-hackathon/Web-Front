@@ -1,5 +1,8 @@
 <div *ngFor="let project of (projects$ | async)">
-  <p>project.title</p>
-  <button (click)="cancel(project)">キャンセル</button>
-  <button (click)="apply(project)">参加する</button>
-</div>
+  <app-project-list-item 
+  [placeName]="project.placeName"
+  [startAt]="project.startAt"
+  [playName]="project.playName"
+  (join)="apply(project)"
+  (stop)="cancel(project)"></app-project-list-item>
+</div>z

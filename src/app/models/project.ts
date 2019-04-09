@@ -2,8 +2,9 @@ import { state } from './project-user';
 
 export interface Project {
     id: string;
-    playtime: Date;
+    playName: string;
+    startAt: Date;
     price: number;
-    place: string;
+    placeName: string;
     state: state;
 }

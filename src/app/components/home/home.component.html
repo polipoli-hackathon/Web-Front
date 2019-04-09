@@ -1,3 +1,4 @@
+
 <main>
   <div *ngIf="afAuth.authState | async; let user; else showLogin">
     <h1>Hello {{user.displayName}}!</h1>
@@ -8,4 +9,12 @@
       <p>Login!</p>
     </a>
   </ng-template>
+
+<a [routerLink]="[ '/input-project']">
+  <button>一緒に遊ぶ仲間を探そう</button>
+</a>
+<p>募集中のスポーツ</p>
+<app-project-list></app-project-list>
+<p>今すぐやるスポーツ</p>
+<app-project-list></app-project-list>
 </main>
