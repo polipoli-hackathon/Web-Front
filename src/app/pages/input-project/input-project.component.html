@@ -1,22 +1,28 @@
-<div>
-    <label>どのスポーツをしたい？</label>
+<div id="top-bar">
+  <label id="title">一緒にスポーツする人を見つけよう</label>
+  <div id="input-box">
+    <label id="label-play">どのスポーツをしたい？</label>
     <div>
       <select id="play"  required>
-        <option *ngFor="let play of plays" 
+        <option *ngFor="let play of plays"
         [value]="play"
         [(ngModel)]="data.playName">{{play}}</option>
       </select>
     </div>
-    <label>どれくらい遊びたい？</label>
+    <label id="label-startAt">いつ遊ぶ？</label>
+    <input id="startAt" [(ngModel)]="data.startAt"/>
+    <label id="label-hours">どれくらい遊びたい？</label>
     <div>
       <select id="hours"  required>
-        <option *ngFor="let hour of hours" 
+        <option *ngFor="let hour of hours"
         [value]="hour"
         [(ngModel)]="data.term">{{hour}}h</option>
       </select>
     </div>
-    <input id="place" [(ngModel)]="data.place" />
+    <label id="label-price">予算はどのくらい？</label>
     <input id="price" [(ngModel)]="data.price" />
-    <input id="startAt" [(ngModel)]="data.startAt"/>
-    <button type="submit" onclick="post(data)">Togetherしよう！</button>
+    <label id="label-place">どこで遊ぶ？</label>
+    <input id="place" [(ngModel)]="data.place" />
+    <button type="submit" id="submit" onclick="post(data)">Togetherしよう！</button>
+  </div>
 </div>

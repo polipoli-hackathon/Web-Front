@@ -1,0 +1,181 @@
+#top-bar {
+	position: absolute;
+	width: 375px;
+	height: 182px;
+	left: 0px;
+	top: 0px;
+	background: #18D4DB;
+}
+#title{
+	position: absolute;
+	width: 240px;
+	height: 23px;
+	left: 67px;
+	top: 59px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 15px;
+	line-height: normal;
+	text-align: center;
+	color: #FFFFFF;
+}
+#input-box{
+	position: absolute;
+	width: 327px;
+	height: 422px;
+	left: 24px;
+	top: 134px;
+	background: #FFFFFF;
+	border-radius: 8px;
+}
+#label-play {
+	position: absolute;
+	width: 113px;
+	height: 20px;
+	left: 24px;
+	top: 25px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#play {
+	position: absolute;
+	width: 279px;
+	height: 48px;
+	left: 24px;
+	top: 68px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#label-startAt{
+	position: absolute;
+	width: 52px;
+	height: 20px;
+	left: 24px;
+	top: 116px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#startAt{
+	position: absolute;
+	width: 132px;
+	height: 44px;
+	left: 24px;
+	top: 140px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#label-hours{
+	position: absolute;
+	width: 120px;
+	height: 20px;
+	left: 171px;
+	top: 116px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#hours{
+	position: absolute;
+	width: 132px;
+	height: 44px;
+	left: 171px;
+	top: 140px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#question-how-many{
+	position: absolute;
+	width: 82px;
+	height: 20px;
+	left: 24px;
+	top: 189px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#input-how-many{
+	position: absolute;
+	width: 132px;
+	height: 44px;
+	left: 24px;
+	top: 220px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#label-price{
+	position: absolute;
+	width: 120px;
+	height: 20px;
+	left: 171px;
+	top: 189px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#price {
+	position: absolute;
+	width: 132px;
+	height: 44px;
+	left: 171px;
+	top: 220px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#label-place{
+	position: absolute;
+	width: 100px;
+	height: 20px;
+	left: 24px;
+	top: 269px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.25px;
+	color: #1E2424;
+}
+#place{
+	position: absolute;
+	width: 279px;
+	height: 48px;
+	left: 24px;
+	top: 300px;
+	background: #FFFFFF;
+	border: 2px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 6px;
+}
+#submit {
+	position: absolute;
+	width: 279px;
+	height: 48px;
+	left: 24px;
+	top: 356px;
+	background: #18D4DB;
+  border-radius: 24px;
+  font-family: Avenir;
+	font-size: 15px;
+	line-height: normal;
+	text-align: center;
+	color: #FFFFFF;
+}
