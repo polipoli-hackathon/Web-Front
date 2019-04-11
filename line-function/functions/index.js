@@ -11,6 +11,7 @@ if (!serviceAccount) {
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
+
 const bodyParser = require('body-parser');
 const express = require('express');
 const expressValidator = require("express-validator");
@@ -18,6 +19,9 @@ const cookieParser = require('cookie-parser')();
 const cors = require('cors')({origin: true});
 
 const app = express();
+const helmet = require('helmet');
+
+app.use(helmet());
 
 app.use(bodyParser.json());
 app.use(expressValidator([])); // this line must be immediately after any of the bodyParser middlewares!
