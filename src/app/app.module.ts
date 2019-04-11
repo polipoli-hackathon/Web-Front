@@ -12,8 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectListComponent } from './pages/project-list/project-list.component';
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
 import { InputProjectComponent } from './pages/input-project/input-project.component';
+import { LineAuthHandlerComponent } from './components/line-auth-handler/line-auth-handler.component';
 import { ShareComponent } from './components/share/share.component';
 import { AlertComponent } from './components/alert/alert.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { AlertComponent } from './components/alert/alert.component';
     ProjectListItemComponent,
     InputProjectComponent,
     HomeComponent,
+    LineAuthHandlerComponent,
     ShareComponent,
     AlertComponent,
   ],

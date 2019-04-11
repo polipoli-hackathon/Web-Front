@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AuthStateService} from '../../services/auth-state.service';
 import { environment } from '../../../environments/environment';
-
+import { AuthStateService } from '../../services/auth-state.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-
 export class HomeComponent implements OnInit {
 
   constructor(public afAuth: AngularFireAuth,
@@ -35,3 +33,4 @@ export class HomeComponent implements OnInit {
     this.afAuth.auth.signOut();
   }
 }
+
