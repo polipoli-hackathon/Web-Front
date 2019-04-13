@@ -1,7 +1,9 @@
-<p>
-  {{placeName}}
-  {{startAt}}
-  {{playName}}
-  <button (click)="apply()">参加する</button>
-  <button (click)="cancel()">キャンセル</button>
-</p>
+<div class="list-item">
+  <div id="list-item-image"></div>
+  <label id="list-item-startAt">{{startAt}}</label>
+  <label id="list-item-price">{{price}}</label>
+  <label id="dot">・</label>{{playName}}
+  <label id="list-item-prace">{{placeName}}</label>
+  <button id="join" (click)="apply()">参加する</button>
+  <button id="join" (click)="cancel()">キャンセル</button>
+</div>
