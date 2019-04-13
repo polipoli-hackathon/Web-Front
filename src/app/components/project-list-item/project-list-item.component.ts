@@ -17,7 +17,7 @@ export class ProjectListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  apply() {
+  entry() {
     this.join.emit();
   }
 
