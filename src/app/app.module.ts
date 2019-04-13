@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { ProjectListComponent } from './pages/project-list/project-list.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
 import { InputProjectComponent } from './pages/input-project/input-project.component';
 import { ShareComponent } from './components/share/share.component';
