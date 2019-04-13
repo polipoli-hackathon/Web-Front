@@ -46,7 +46,8 @@
       </mat-form-field>
     </div>
     <div>
-      <button mat-button (click)="post()">Togetherしよう！</button>
+      <button mat-button type="submit" 
+      [disabled]="!projectForm.valid">Togetherしよう！</button>
     </div>
 </div>
 </form>
