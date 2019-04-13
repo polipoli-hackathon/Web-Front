@@ -2,37 +2,30 @@
   <div class="form-group">
     <label for="playName">どのスポーツをしたい？</label>
     <div>
-      <select id="play"  required>
-        <option *ngFor="let play of plays" 
-        [value]="play"
-        [(ngModel)]='playName'
-        ngDefaultControl>{{play}}</option>
+      <select id="play"  formControlName="playName">
+        <option *ngFor="let play of plays" [(ngValue)]='play'>{{play}}</option>
       </select>
     </div>
     <label for="term">どれくらい遊びたい？</label>
     <div>
-      <select id="hour"  required>
+      <select id="hour"  formControlName="hour">
         <option *ngFor="let hour of hours" 
-        [value]="hour"
-        [(ngModel)]="term"
+        [(ngValue)]="hour"
         ngDefaultControl>{{hour}}h</option>
       </select>
     </div>
     <div>
         <mat-form-field class="example-full-width">
             <input MatInput
-            [(ngModel)]="birthday"
             [value]="picker" 
             [min]="minDate" 
             [max]="maxDate"
-            [matDatepicker]="picker" 
-            placeholder="Choose a date"
-            id="picker">
+            [matDatepicker]="picker"
+            formControlName="term">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
     </div>
-    
     <div>
       <mat-form-field>
         場所は？？
@@ -49,5 +42,5 @@
       <button mat-button type="submit" 
       [disabled]="!projectForm.valid">Togetherしよう！</button>
     </div>
-</div>
+  </div>
 </form>

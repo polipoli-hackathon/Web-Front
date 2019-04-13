@@ -8,14 +8,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
   styleUrls: ['./input-project.component.scss']
 })
 export class InputProjectComponent implements OnInit {
-  public projectForm = new FormGroup({
-    playName: new FormControl(''),
-    hour: new FormControl(''),
-    term: new FormControl(''),
-    placeName: new FormControl(''),
-    price: new FormControl('')
-  });
-
+  public projectForm: FormGroup;
 
   public minDate = new Date(2000, 0, 1);
   public maxDate = new Date(2020, 0, 1);
@@ -27,17 +20,22 @@ export class InputProjectComponent implements OnInit {
 
   constructor(
     private projectService: ProjectService,
-    private formBuilder: FormBuilder
+    private fb: FormBuilder
   ) {
-    this.projectForm = this.formBuilder.group({});
+    this.projectForm = this.fb.group({
+      playName: [''],
+      hour: [''],
+      term: [''],
+      placeName: [''],
+      price: ['']
+    });
   }
 
   ngOnInit() {
   }
 
-
-  public post(data): void {
-    this.projectService.addProject(data);
+  onSubmit() {
+    this.projectService.addProject(this.projectForm.value);
   }
 
 }
