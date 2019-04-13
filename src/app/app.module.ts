@@ -16,7 +16,8 @@ import { InputProjectComponent } from './pages/input-project/input-project.compo
 import { ShareComponent } from './components/share/share.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule } from '@angular/material';
+import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule, MatButtonModule } from '@angular/material';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,13 @@ import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputM
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
-  providers: [ AngularFirestore ],
+  providers: [
+    AngularFirestore,
+    DatePipe
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

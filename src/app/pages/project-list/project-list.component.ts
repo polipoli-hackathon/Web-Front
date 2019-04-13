@@ -9,7 +9,7 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
-  public projects$: Observable<Project[]>;
+  public projects$ = this.projectService.projects$;
 
   constructor(
     private projectService: ProjectService
@@ -19,9 +19,8 @@ export class ProjectListComponent implements OnInit {
     this.load();
   }
 
-  private load(): Observable<Project[]> {
-    this.projects$ = this.projectService.loadProjects();
-    return this.projects$;
+  private load() {
+    this.projectService.loadProjects();
   }
 
   entry(data: Project): void {

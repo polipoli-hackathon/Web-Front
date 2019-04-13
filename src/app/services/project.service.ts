@@ -11,7 +11,10 @@ import * as ProjectUser from '../models/project-user';
 
 export class ProjectService {
   private _projects$: BehaviorSubject<Project[]>;
-  private projects$: Observable<Project[]>;
+
+  get projects$(): Observable<Project[]> {
+    return this.db.collection<Project>('projects').valueChanges();
+  }
 
   constructor(
     private db: AngularFirestore
@@ -22,24 +25,17 @@ export class ProjectService {
   private async updateProject(project: Project, state: string) {
     await this.db.collection<Project>('projects')
       .doc(project.id)
-      .update({ state: state })
-      .then(() => {
-        this.fetchProjects();
-    });
+      .update({ state: state });
   }
 
   private fetchProjects(): Observable<Project[]> {
-    return this.db.collection<Project>('projects').valueChanges().pipe(
-      mergeMap(data => {
-        this._projects$.next(data);
-        this.projects$ = this._projects$.asObservable();
-        return this.projects$;
-      })
-    );
+    return this.db.collection<Project>('projects').valueChanges();
   }
 
-  loadProjects(): Observable<Project[]> {
-    return this.projects$ || this.fetchProjects();
+  loadProjects(): void {
+    this.fetchProjects().subscribe(data => {
+      this._projects$.next(data);
+    });
   }
 
   async addProject(data: Project) {

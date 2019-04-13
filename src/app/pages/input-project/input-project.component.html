@@ -1,32 +1,52 @@
-<div>
-    <label>どのスポーツをしたい？</label>
+<form #projectForm="ngForm">
+  <div class="form-group">
+    <label for="playName">どのスポーツをしたい？</label>
     <div>
       <select id="play"  required>
         <option *ngFor="let play of plays" 
         [value]="play"
-        [(ngModel)]="data.playName"
+        [(ngModel)]='playName'
         ngDefaultControl>{{play}}</option>
       </select>
     </div>
-    <label>どれくらい遊びたい？</label>
+    <label for="term">どれくらい遊びたい？</label>
     <div>
       <select id="hour"  required>
         <option *ngFor="let hour of hours" 
         [value]="hour"
-        [(ngModel)]="data.term"
+        [(ngModel)]="term"
         ngDefaultControl>{{hour}}h</option>
       </select>
     </div>
-    <mat-form-field class="example-full-width">
-      <input matInput [(ngModel)]="data.startAt" [min]="minDate" [max]="maxDate"[matDatepicker]="picker" placeholder="Choose a date">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  <div>
-  <div>
-      <input id="place" [(ngModel)]="data.place" />
-      <input id="price" [(ngModel)]="data.price" />
-  </div>
-  <button type="button" (click)="post(data)" class="btn btn-success">Togetherしよう！</button>
-
+    <div>
+        <mat-form-field class="example-full-width">
+            <input MatInput
+            [(ngModel)]="birthday"
+            [value]="picker" 
+            [min]="minDate" 
+            [max]="maxDate"
+            [matDatepicker]="picker" 
+            placeholder="Choose a date"
+            id="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    
+    <div>
+      <label for="place">場所はどこ？</label>
+      <mat-form-field>
+        <input id="place" [(ngModel)]="placeName"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <label for="price">いくら?</label>
+      <mat-form-field>
+        <input id="price" [(ngModel)]="price"/>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-button (click)="post()">Togetherしよう！</button>
+    </div>
 </div>
+</form>
