@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input-project',
@@ -7,6 +8,14 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./input-project.component.scss']
 })
 export class InputProjectComponent implements OnInit {
+  public projectForm = new FormGroup({
+    playName: new FormControl(''),
+    hour: new FormControl(''),
+    term: new FormControl(''),
+    placeName: new FormControl(''),
+    price: new FormControl('')
+  });
+
 
   public minDate = new Date(2000, 0, 1);
   public maxDate = new Date(2020, 0, 1);
@@ -18,14 +27,14 @@ export class InputProjectComponent implements OnInit {
 
   constructor(
     private projectService: ProjectService,
-    public playName: string,
-    public placeName: string,
-    public price: number,
-    public term: number
-  ) { }
+    private formBuilder: FormBuilder
+  ) {
+    this.projectForm = this.formBuilder.group({});
+  }
 
   ngOnInit() {
   }
+
 
   public post(data): void {
     this.projectService.addProject(data);

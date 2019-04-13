@@ -1,4 +1,4 @@
-<form #projectForm="ngForm">
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="playName">どのスポーツをしたい？</label>
     <div>
@@ -34,15 +34,15 @@
     </div>
     
     <div>
-      <label for="place">場所はどこ？</label>
       <mat-form-field>
-        <input id="place" [(ngModel)]="placeName"/>
+        場所は？？
+        <input type="text" formControlName="placeName">
       </mat-form-field>
     </div>
     <div>
-      <label for="price">いくら?</label>
       <mat-form-field>
-        <input id="price" [(ngModel)]="price"/>
+        いくら？
+        <input type="text" formControlName="price">
       </mat-form-field>
     </div>
     <div>
