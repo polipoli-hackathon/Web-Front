@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { mergeMap } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Project } from '../models/project';
 import * as ProjectUser from '../models/project-user';
