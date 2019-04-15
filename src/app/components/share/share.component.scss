@@ -1,0 +1,75 @@
+.cancel {
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 0 7px;
+  padding: 0;
+  width: 4px;
+  height: 20px;
+  background: #18D4DB;
+  transform: rotate(45deg);
+  top: 57.83px;
+  left: 17.83px;
+}
+.cancel::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 20px;
+  height: 4px;
+  background-color: #18D4DB;
+  margin-top: -2px;
+}
+#share_illust {
+  position: absolute;
+  width: 327px;
+  height: 422px;
+  left: 24px;
+  top: 98px;
+  background: #00C8FE;
+  border-radius: 8px;
+}
+#line_button {
+  position: absolute;
+  width: 279px;
+  height: 48px;
+  left: 48px;
+  top: 560px;
+  background: #86E869;
+  border-radius: 24px;
+  font-family: Avenir;
+  font-size: 15px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff
+}
+#twitter_button {
+  position: absolute;
+  width: 279px;
+  height: 48px;
+  left: 48px;
+  top: 624px;
+  background: #3E9AEA;
+  border-radius: 24px;
+  font-family: Avenir;
+  font-size: 15px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff
+}
+
+#facebook_button {
+  position: absolute;
+  width: 279px;
+  height: 48px;
+  left: 48px;
+  top: 688px;
+  background: #1E53CC;
+  border-radius: 24px;
+  font-family: Avenir;
+  font-size: 15px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff
+}
