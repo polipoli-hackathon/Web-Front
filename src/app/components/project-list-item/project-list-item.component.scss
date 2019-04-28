@@ -1,0 +1,83 @@
+.list-item {
+	position: absolute;
+	width: 167px;
+	height: 214px;
+	background: #FFFFFF;
+	border: 1px solid #E6EAEA;
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+
+#list-item-image {
+	position: absolute;
+	width: 167px;
+	height: 83px;
+	background: #E4CCCC;
+	border-radius: 8px 8px 0px 0px;
+}
+
+#list-item-startAt {
+	position: absolute;
+	width: 122px;
+	height: 21px;
+	left: 17px;
+	top: 94px;
+	font-family: Avenir;
+	font-size: 15px;
+	line-height: normal;
+	text-align: center;
+	color: #1E2424;
+}
+
+#list-item-price {
+	position: absolute;
+	width: 27px;
+	height: 17px;
+	left: 17px;
+	top: 124px;
+	font-family: Avenir;
+	font-size: 10px;
+	line-height: normal;
+	text-align: center;
+	color: #5C6F70;
+}
+
+#dot {
+	position: absolute;
+	width: 5px;
+	height: 17px;
+	left: 47px;
+	top: 124px;
+	font-family: Avenir;
+	font-size: 10px;
+	line-height: normal;
+	text-align: center;
+	color: #5C6F70;
+}
+
+#list-item-prace {
+	position: absolute;
+	width: 120px;
+	height: 17px;
+	left: 60px;
+	top: 124px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 10px;
+	line-height: normal;
+	color: #5C6F70;
+}
+
+#join {
+	position: absolute;
+	width: 133px;
+	height: 36px;
+	left: 17px;
+	top: 164px;
+	background: #18D4DB;
+	border-radius: 6px;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 15px;
+	line-height: normal;
+	text-align: center;
+	color: #FFFFFF;
+}
