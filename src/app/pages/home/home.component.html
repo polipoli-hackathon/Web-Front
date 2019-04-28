@@ -1,7 +1,13 @@
+<div id="header"><label id="header_label">Getogether</label></div>
+<div id="main_image"></div>
 <a [routerLink]="[ '/input-project']">
-  <button>一緒に遊ぶ仲間を探そう</button>
+  <button id="create">一緒に遊ぶ仲間を探そう</button>
 </a>
-<p>募集中のスポーツ</p>
-<app-project-list></app-project-list>
-<p>今すぐやるスポーツ</p>
-<app-project-list></app-project-list>
+<label id="label1">募集中のスポーツ</label>
+<div id="app_list_1">
+  <app-project-list></app-project-list>
+</div>
+<label id="label2">今すぐやるスポーツ</label>
+<div id="app_list_2">
+  <app-project-list></app-project-list>
+</div>
