@@ -8,6 +8,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class ProjectListItemComponent implements OnInit {
   @Input() readonly placeName: string;
   @Input() readonly playName: string;
+  @Input() readonly price: string;
   @Input() readonly startAt: Date;
   @Output() join = new EventEmitter();
   @Output() stop = new EventEmitter();
@@ -17,7 +18,7 @@ export class ProjectListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  apply() {
+  entry() {
     this.join.emit();
   }
 

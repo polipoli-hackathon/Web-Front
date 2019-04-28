@@ -9,23 +9,22 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
-  public projects$: Observable<Project[]>;
+  public projects$ = this.projectService.projects$;
 
   constructor(
     private projectService: ProjectService
   ) { }
 
   ngOnInit() {
-    this.get();
+    this.load();
   }
 
-  private get(): Observable<Project[]> {
-    this.projects$ = this.projectService.getProjects();
-    return this.projects$;
+  private load() {
+    this.projectService.loadProjects();
   }
 
-  apply(data: Project): void {
-    this.projectService.applyProject(data);
+  entry(data: Project): void {
+    this.projectService.entryProject(data);
   }
 
   cancel(data: Project): void {

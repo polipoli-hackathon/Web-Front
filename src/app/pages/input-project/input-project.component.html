@@ -1,22 +1,46 @@
-<div>
-    <label>どのスポーツをしたい？</label>
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="playName">どのスポーツをしたい？</label>
     <div>
-      <select id="play"  required>
-        <option *ngFor="let play of plays" 
-        [value]="play"
-        [(ngModel)]="data.playName">{{play}}</option>
+      <select id="play"  formControlName="playName">
+        <option *ngFor="let play of plays" [(ngValue)]='play'>{{play}}</option>
       </select>
     </div>
-    <label>どれくらい遊びたい？</label>
+    <label for="term">どれくらい遊びたい？</label>
     <div>
-      <select id="hours"  required>
+      <select id="hour"  formControlName="hour">
         <option *ngFor="let hour of hours" 
-        [value]="hour"
-        [(ngModel)]="data.term">{{hour}}h</option>
+        [(ngValue)]="hour"
+        ngDefaultControl>{{hour}}h</option>
       </select>
     </div>
-    <input id="place" [(ngModel)]="data.place" />
-    <input id="price" [(ngModel)]="data.price" />
-    <input id="startAt" [(ngModel)]="data.startAt"/>
-    <button type="submit" onclick="post(data)">Togetherしよう！</button>
-</div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <input MatInput
+            [value]="picker" 
+            [min]="minDate" 
+            [max]="maxDate"
+            [matDatepicker]="picker"
+            formControlName="term">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        場所は？？
+        <input type="text" formControlName="placeName">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        いくら？
+        <input type="text" formControlName="price">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-button type="submit" 
+      [disabled]="!projectForm.valid">Togetherしよう！</button>
+    </div>
+  </div>
+</form>
