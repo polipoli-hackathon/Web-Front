@@ -18,6 +18,8 @@ import { AlertComponent } from './components/alert/alert.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule, MatButtonModule } from '@angular/material';
 import { DatePipe } from '@angular/common';
+import { LineAuthHandlerComponent } from './components/line-auth-handler/line-auth-handler.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { DatePipe } from '@angular/common';
     HomeComponent,
     ShareComponent,
     AlertComponent,
+    LineAuthHandlerComponent,
   ],
   imports: [
     BrowserModule,
