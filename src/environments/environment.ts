@@ -14,19 +14,20 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'XXXXX',
-    authDomain: 'XXXXX',
-    databaseURL: 'XXXXX',
-    projectId: 'XXXXX',
-    storageBucket: 'XXXXX',
-    messagingSenderId: 'XXXXX',
-  },
-  cloud_functions: {
-    host_name: 'https://XXXXX.cloudfunctions.net',
+    apiKey: 'AIzaSyCAPFezesU6R9GZwmzCe2zTVQudGXpXCoI',
+    authDomain: 'getogether-3f261.firebaseapp.com',
+    databaseURL: 'https://getogether-3f261.firebaseio.com',
+    projectId: 'getogether-3f261',
+    storageBucket: 'getogether-3f261.appspot.com',
+    messagingSenderId: '451338627783'
   },
   line: {
     login: {
-      channel_id: 'XXXXXXXXXX',
-    },
+      channel_id: '1569929241'
+    }
   },
+  cloud_functions: {
+    host_name: 'https://us-central1-getogether-3f261.cloudfunctions.net'
+  }
 };
+
